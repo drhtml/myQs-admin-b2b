@@ -1,0 +1,34 @@
+{
+    "permissions": {
+        "auth": {
+            "myqsb2badminf46eb6e0": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "api": {
+            "myqsb2badmin": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        },
+        "storage": {
+            "s323b58946": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ],
+            "User:@model(appsync)": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        }
+    }
+}

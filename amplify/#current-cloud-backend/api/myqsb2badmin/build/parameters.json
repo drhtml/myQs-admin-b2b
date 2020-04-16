@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "myqsb2badmin",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmyqsb2badminf46eb6e0",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-myqsb2b-admin-devmyqs-180606-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/675658a2db880cba1612e674cdca8c646224de31"
+}

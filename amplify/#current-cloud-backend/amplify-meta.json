@@ -1,0 +1,126 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-myqsb2b-admin-devmyqs-180606-authRole",
+			"UnauthRoleArn": "arn:aws:iam::872117733740:role/amplify-myqsb2b-admin-devmyqs-180606-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::872117733740:role/amplify-myqsb2b-admin-devmyqs-180606-authRole",
+			"Region": "us-east-2",
+			"DeploymentBucketName": "amplify-myqsb2b-admin-devmyqs-180606-deployment",
+			"UnauthRoleName": "amplify-myqsb2b-admin-devmyqs-180606-unauthRole",
+			"StackName": "amplify-myqsb2b-admin-devmyqs-180606",
+			"StackId": "arn:aws:cloudformation:us-east-2:872117733740:stack/amplify-myqsb2b-admin-devmyqs-180606/858c4c40-7e4c-11ea-809c-0a6c486e9f90",
+			"AmplifyAppId": "d1edrm0gcdqi8n"
+		}
+	},
+	"auth": {
+		"myqsb2badminf46eb6e0": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false,
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-myqsb2b-admin-devmyqs-180606-deployment/amplify-cfn-templates/auth/myqsb2badminf46eb6e0-cloudformation-template.yml",
+				"logicalId": "authmyqsb2badminf46eb6e0"
+			},
+			"lastPushTimeStamp": "2020-04-16T13:16:42.656Z",
+			"output": {
+				"AppClientSecret": "18u0svlfhfr0anf550lku9tb698f3aevjr1326jgh0qlhf7ako8t",
+				"UserPoolId": "us-east-2_KhDJmIx1f",
+				"AppClientIDWeb": "3bfrbi91v57vn3caa396qkuf05",
+				"AppClientID": "662nf9qs9h2tvfp289ko44ubnk",
+				"IdentityPoolId": "us-east-2:bc97f252-b32e-44a7-ab92-bd11205b5691",
+				"IdentityPoolName": "myqsb2badminf46eb6e0_identitypool_f46eb6e0__devmyqs",
+				"UserPoolName": "myqsb2badminf46eb6e0_userpool_f46eb6e0"
+			},
+			"lastPushDirHash": "sY2QqQrDax7VD6fJnSo/0GsZTNU="
+		}
+	},
+	"api": {
+		"myqsb2badmin": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authmyqsb2badminf46eb6e0"
+						}
+					}
+				},
+				"GraphQLAPIIdOutput": "gxizmwn6njdpzjwsnmfopcfr4a",
+				"GraphQLAPIEndpointOutput": "https://3ibfox3jxnfpvfrx3setozur2i.appsync-api.us-east-2.amazonaws.com/graphql"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-myqsb2b-admin-devmyqs-180606-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apimyqsb2badmin"
+			},
+			"lastPushTimeStamp": "2020-04-16T13:16:42.657Z",
+			"lastPushDirHash": "ihD63vcoY91641Ioal6BRh9G3mo="
+		}
+	},
+	"storage": {
+		"s323b58946": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-myqsb2b-admin-devmyqs-180606-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storages323b58946"
+			},
+			"lastPushTimeStamp": "2020-04-16T13:16:42.664Z",
+			"output": {
+				"BucketName": "myqsb2b-adminb027517082ad4aa3abf8ddb406963c9edevmyqs-devmyqs",
+				"Region": "us-east-2"
+			},
+			"lastPushDirHash": "dwh0zmgM6fh7NOt+pnUC7a8NmPI="
+		}
+	},
+	"function": {
+		"myqsb2badmin7598d8f5": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": [
+				{
+					"category": "api",
+					"resourceName": "myqsb2badmin",
+					"attributes": [
+						"GraphQLAPIIdOutput",
+						"GraphQLAPIEndpointOutput"
+					]
+				},
+				{
+					"category": "auth",
+					"resourceName": "myqsb2badminf46eb6e0",
+					"attributes": [
+						"UserPoolId"
+					]
+				},
+				{
+					"category": "storage",
+					"resourceName": "s323b58946",
+					"attributes": [
+						"BucketName"
+					]
+				}
+			],
+			"lastBuildTimeStamp": "2020-04-16T13:13:25.508Z",
+			"lastPackageTimeStamp": "2020-04-16T13:13:25.579Z",
+			"distZipFilename": "myqsb2badmin7598d8f5-3062312f51796873394c-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-myqsb2b-admin-devmyqs-180606-deployment/amplify-cfn-templates/function/myqsb2badmin7598d8f5-cloudformation-template.json",
+				"logicalId": "functionmyqsb2badmin7598d8f5"
+			},
+			"lastPushTimeStamp": "2020-04-16T13:16:42.664Z",
+			"output": {
+				"Region": "us-east-2",
+				"CloudWatchEventRule": "amplify-myqsb2b-admin-devmyqs-1806-CloudWatchEvent-1A9C5HSRWKT7L",
+				"Arn": "arn:aws:lambda:us-east-2:872117733740:function:myqsb2badmin7598d8f5-devmyqs",
+				"Name": "myqsb2badmin7598d8f5-devmyqs",
+				"LambdaExecutionRole": "myqsb2badminLambdaRole148b52be-devmyqs"
+			},
+			"lastPushDirHash": "ZcM320Pa620VdKql4qbRaA8MpPo="
+		}
+	}
+}
