@@ -1,0 +1,16 @@
+<table class="row-border hover w-100">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Company</th>
+      <th>Company Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{ post.id }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -8,20 +8,20 @@
       </amplify-s3-image>
     </div>
     <div class="sidenav-name">
-      <a class="nav-link" href="#"> Hello {{userName}}!</a>
+      <a class="nav-link" routerLink="profile"> Hello {{userName}}!</a>
     </div>
   </div>
   <div class="side-menu">
     <ul>
-      <li><a href="#">Dashborad</a></li>
-      <li><a href="#">Companies</a></li>
-      <li><a href="#">Users</a></li>
-      <li><a href="#">Questions</a></li>
-      <li><a href="#">Cotegories</a></li>
-      <li><a href="#">Chanllenges</a></li>
-      <li><a href="#">Rewards</a></li>
-      <li><a href="#">Billing</a></li>
-      <li><a href="#">Addmin Setting</a></li>
+      <li><a routerLink="/dashboard">Dashborad</a></li>
+      <li><a routerLink="/companies">Companies</a></li>
+      <li><a routerLink="">Users</a></li>
+      <li><a routerLink="/questions">Questions</a></li>
+      <li><a routerLink="/cotegories">Cotegories</a></li>
+      <li><a routerLink="/chanllenges">Chanllenges</a></li>
+      <li><a routerLink="/rewards">Rewards</a></li>
+      <li><a routerLink="/billing">Billing</a></li>
+      <li><a routerLink="/addmin-setting">Addmin Setting</a></li>
       <li><a href="#" (click)="logOut()"> Logout <i class="fa fa-sign-out"></i></a></li>
     </ul>
   </div>
