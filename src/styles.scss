@@ -1,4 +1,42 @@
 @import '~aws-amplify-angular/theme.css';
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
-@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
-
+@import 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css';
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+body, html{
+  overflow: hidden;
+}
+.side-nav {
+  max-width: 300px;
+  width: 300px;
+  height: 100vh;
+  display: inline-block;
+  overflow: auto;
+}
+.main-wrap{
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 300px);
+  height: 100vh;
+  overflow: auto;
+  position: relative;
+}
+.navbar-toggler:focus, .navbar-toggler:hover {
+  text-decoration: none;
+  outline: none;
+}
+button.navbar-toggler span.icon-bar{
+  transition: 0.4s;
+}
+button.navbar-toggler[aria-expanded="true"] span.icon-bar:nth-child(3) {
+  display: none;
+}
+button.navbar-toggler[aria-expanded="true"] span.icon-bar:nth-child(2) {
+  transform: rotate(-45deg);
+  margin: 0;
+  transition: 0.4s;
+}
+button.navbar-toggler[aria-expanded="true"] span.icon-bar:nth-child(4) {
+  transform: rotate(45deg);
+  margin: -1px 0px 0px 0;
+  transition: 0.4s;
+}
