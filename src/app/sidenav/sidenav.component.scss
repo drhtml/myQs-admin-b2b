@@ -1,0 +1,68 @@
+.myqs-nav{
+  background-color: #A1004E;
+  padding: 20px 0;
+  .sidenav-logo {
+    text-align: center;
+    img{
+      max-width: 50px;
+    }
+    span{
+      color: #fff;
+      margin-left: 10px;
+      display: inline-block;
+    }
+  }
+  .profile-icon{
+    padding: 10px 0;
+    margin-top: 15px;
+    text-align: center;
+    img.amplify-image{
+      width: 75px !important;
+      border-radius: 50px !important;
+      border: 1.5px solid #fff !important;
+    }
+  }
+  .sidenav-name {
+    text-align: center;
+    a{
+      color: #fff;
+    }
+  }
+  .side-menu{
+    padding-top: 20px;
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li{
+        a{
+          color: #fff;
+          padding: 10px 15px;
+          position: relative;
+          display: block;
+          &:after{
+            content: "\f105";
+            font-family: FontAwesome;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: auto;
+            right: 15px;
+            width: 15px;
+            height: 15px;
+            background: #fff0;
+            margin: auto;
+            text-align: center;
+            line-height: 15px;
+          }
+          &:hover{
+            background: #000;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
