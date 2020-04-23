@@ -1,0 +1,23 @@
+.myqs-text-primary{
+  color: #A1004E;
+}
+.myqs-text-secondary{
+  color: #ff6434;
+  transition: 0.4s;
+}
+a{
+  color: #A1004E;
+}
+a:hover{
+  color: #ff6434;
+  transition: 0.4s;
+}
+.card-body i{
+  transition: 0.4s;
+}
+.card-body:hover i{
+  transform: scale(1.2);
+  transition: 0.4s;
+  color: #ff6434;
+}
+

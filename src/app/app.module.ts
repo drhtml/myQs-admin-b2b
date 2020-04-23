@@ -5,7 +5,7 @@ import { FormsModule} from '@angular/forms';
 import {AmplifyAngularModule, AmplifyService} from 'aws-amplify-angular';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CompaniesService } from './companies.service'
+import { CompaniesService } from './companies.service';
 
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
