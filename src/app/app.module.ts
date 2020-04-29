@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CompaniesService } from './companies.service';
 import { CategoriesService } from './categories.service';
+import { QuestionsService } from './questions.service';
+
 
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
@@ -21,6 +23,8 @@ import { BillingComponent } from './billing/billing.component';
 import { AddminSettingComponent } from './addmin-setting/addmin-setting.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { from } from 'rxjs';
+import { UsersComponent } from './users/users.component';
+
 
 
 
@@ -39,7 +43,8 @@ import { from } from 'rxjs';
     RewardsComponent,
     BillingComponent,
     AddminSettingComponent,
-    DashboardComponent
+    DashboardComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,12 @@ import { from } from 'rxjs';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AmplifyService, CompaniesService, CategoriesService],
+  providers: [
+    AmplifyService,
+    CompaniesService,
+    CategoriesService,
+    QuestionsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

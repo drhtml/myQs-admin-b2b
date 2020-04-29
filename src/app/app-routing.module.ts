@@ -13,6 +13,7 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { BillingComponent } from './billing/billing.component';
 import { AddminSettingComponent } from './addmin-setting/addmin-setting.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,11 @@ const routes: Routes = [
   {
     path: "companies",
     component: CompaniesComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "users",
+    component: UsersComponent,
     canActivate: [AuthGuard]
   },
   {

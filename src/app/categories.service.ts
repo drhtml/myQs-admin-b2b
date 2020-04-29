@@ -9,7 +9,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class CategoriesService {
 
-  private _url: string = 'https://4mkmt6jdmb.execute-api.us-west-2.amazonaws.com/dev/getcategories';
+  private _url: string = 'https://www.myqsapp.com/categories/getcategories';
   constructor(private http:HttpClient) { }
 
   getCategories(): Observable<ICategories[]>{
