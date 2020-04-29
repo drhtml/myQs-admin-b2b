@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth.guard';
-// import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { QuestionsComponent } from './questions/questions.component';
-import { CotegoriesComponent } from './cotegories/cotegories.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { ChanllengesComponent } from './chanllenges/chanllenges.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { BillingComponent } from './billing/billing.component';
@@ -31,8 +31,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: "cotegories",
-    component: CotegoriesComponent,
+    path: "categories",
+    component: CategoriesComponent,
     canActivate: [AuthGuard]
   },
   {
