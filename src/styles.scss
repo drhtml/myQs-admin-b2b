@@ -41,3 +41,15 @@ button.navbar-toggler[aria-expanded="true"] span.icon-bar:nth-child(4) {
   margin: -1px 0px 0px 0;
   transition: 0.4s;
 }
+.theme-green .bs-datepicker-head,
+.theme-green .bs-datepicker-body table td span.selected, {
+  background-color: #A1004E !important;
+}
+.bs-datepicker-head button.next span,
+.bs-datepicker-head button.previous span{
+  color: #fff !important;
+}
+.bs-datepicker-head button.current span {
+  color: #fff !important;
+}
+

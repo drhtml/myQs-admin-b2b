@@ -3,6 +3,8 @@ import { Auth } from 'aws-amplify';
 import { APIService } from '../API.service';
 import { Router } from '@angular/router';
 import { User } from '../user';
+import { Observable } from '../../../node_modules/rxjs';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -10,13 +12,16 @@ import { User } from '../user';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
+
+  constructor(private api: APIService, private router: Router) { }
   userId: string;
   userName: string;
   user = new User('', '', '', '', '', '');
   showPhoto: boolean;
   userCreated: boolean;
 
-  constructor(private api: APIService, private router: Router) { }
+  loginStaus$: Observable<boolean>;
+  userName$: Observable<string>;
 
   ngOnInit() {
     this.showPhoto = false;

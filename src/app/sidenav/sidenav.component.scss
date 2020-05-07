@@ -60,6 +60,9 @@
             text-decoration: none;
             background: rgba(0, 0, 0, 0.2);
           }
+          &.active{
+            background: rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }

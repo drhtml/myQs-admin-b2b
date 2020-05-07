@@ -8,15 +8,21 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ChanllengesComponent } from './chanllenges/chanllenges.component';
+import { ChallengesComponent } from './challenges/challenges.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { BillingComponent } from './billing/billing.component';
 import { AddminSettingComponent } from './addmin-setting/addmin-setting.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
+import { TopnavComponent } from './topnav/topnav.component';
 
 
 const routes: Routes = [
+  {
+    path: "topnav",
+    component: TopnavComponent,
+    canActivate: [AuthGuard]
+  },
   { path: "dashboard",
     component: DashboardComponent,
     canActivate: [AuthGuard]
@@ -42,8 +48,8 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: "chanllenges",
-    component: ChanllengesComponent,
+    path: "challenges",
+    component: ChallengesComponent,
     canActivate: [AuthGuard]
   },
   {

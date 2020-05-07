@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
-import {AmplifyAngularModule, AmplifyService} from 'aws-amplify-angular';
+import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
 import { AppRoutingModule } from './app-routing.module';
 
 import { CompaniesService } from './companies.service';
@@ -17,13 +17,16 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ChanllengesComponent } from './chanllenges/chanllenges.component';
+import { ChallengesComponent } from './challenges/challenges.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { BillingComponent } from './billing/billing.component';
 import { AddminSettingComponent } from './addmin-setting/addmin-setting.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { from } from 'rxjs';
 import { UsersComponent } from './users/users.component';
+import { TopnavComponent } from './topnav/topnav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 
@@ -39,19 +42,22 @@ import { UsersComponent } from './users/users.component';
     CompaniesComponent,
     QuestionsComponent,
     CategoriesComponent,
-    ChanllengesComponent,
+    ChallengesComponent,
     RewardsComponent,
     BillingComponent,
     AddminSettingComponent,
     DashboardComponent,
-    UsersComponent
+    UsersComponent,
+    TopnavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AmplifyAngularModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [
     AmplifyService,
