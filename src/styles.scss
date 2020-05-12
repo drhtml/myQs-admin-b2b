@@ -1,6 +1,5 @@
 @import '~aws-amplify-angular/theme.css';
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
-@import 'https://cdn.linearicons.com/free/1.0.0/icon-font.min.css';
 @import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 body, html{
   overflow: hidden;
@@ -52,4 +51,15 @@ button.navbar-toggler[aria-expanded="true"] span.icon-bar:nth-child(4) {
 .bs-datepicker-head button.current span {
   color: #fff !important;
 }
-
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #A10251;
+  border-color: #A10251;
+}
+.page-link,
+.page-link:hover {
+  color: #A10251;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}

@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CompaniesService } from './companies.service';
 import { CategoriesService } from './categories.service';
 import { QuestionsService } from './questions.service';
-
+import { ChallengesService } from './challenges.service';
+import { UsersService } from './users.service';
 
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
@@ -27,7 +28,10 @@ import { UsersComponent } from './users/users.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { DataTablesModule } from 'angular-datatables';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -57,13 +61,19 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    PaginationModule.forRoot(),
+    DataTablesModule,
+    NgxPaginationModule,
+    ModalModule.forRoot()
   ],
   providers: [
     AmplifyService,
     CompaniesService,
     CategoriesService,
-    QuestionsService
+    QuestionsService,
+    ChallengesService,
+    UsersService
   ],
   bootstrap: [AppComponent]
 })

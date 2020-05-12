@@ -10,31 +10,28 @@
         <table class="table table-hover">
           <thead class="thead-light">
             <tr>
-              <th scope="col">Challenges ID</th>
-              <th scope="col">Challenges Name</th>
+              <th scope="col">S. No.</th>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Action</th>
 
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Challenges Challenges</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Challenges Challenges</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Challenges Challenges</td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Challenges Challenges</td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-              <td>Challenges Challenges</td>
+            <tr *ngFor="let challenge of challenges">
+              <td>1</td>
+              <td>{{challenge.id}}</td>
+              <td>{{challenge.challengename}}</td>
+              <td>{{challenge.startdate}}</td>
+              <td>{{challenge.enddate}}</td>
+              <td>{{challenge.points}}</td>
+              <td>{{challenge.status}}</td>
+              <td>{{challenge.timelimit}}</td>
+              <td>{{challenge.correct}}</td>
+              <!-- <td>{{challenge.questions.count}}</td> -->
+              <td><button class="btn btn-default btn-sm"><i class="fa fa-pencil"></i></button></td>
             </tr>
           </tbody>
         </table>

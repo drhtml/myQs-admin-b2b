@@ -1,7 +1,13 @@
 export interface ICategories {
   categoryname: string;
-  subcategoryname: string;
   difficultylevel: string;
-  isEnabled: string;
-  creationdata: number;
+  subcategories: SubcategoriesArray;
 }
+type SubcategoriesArray = Array<
+{
+  subcategoryname: string,
+  creationdata: string,
+  isEnabled: string,
+}
+>;
+

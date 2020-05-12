@@ -10,7 +10,7 @@ import 'rxjs/add/observable/throw';
 export class CategoriesService {
 
   private _url: string = 'https://www.myqsapp.com/categories/getcategories';
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getCategories(): Observable<ICategories[]>{
     return this.http.get<ICategories[]>(this._url);

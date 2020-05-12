@@ -10,25 +10,27 @@
         <table class="table table-hover">
           <thead class="thead-light">
             <tr>
+              <th>S. No.</th>
               <th>Category</th>
               <th>Sub Categoryname</th>
-              <th>Difficulty Level</th>
-              <th>Enabled</th>
+              <th>Level</th>
               <th>Creation Data</th>
+              <th>Enabled</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let category of categories">
-              <td>{{category.categoryname}}</td>
-              <td>{{category.subcategoryname}}</td>
-              <td>{{category.difficultylevel}}</td>
-              <td>{{category.isEnabled}}</td>
-              <td>{{category.creationdata}}</td>
-              <td>
-                <button class="btn btn-edit-categogy" mat-raised-button mat-button-sm>Edit</button>
-              </td>
-            </tr>
+           <ng-container *ngFor="let categoryData of categories">
+              <tr *ngFor="let category of categoryData.subcategories">
+                <td>1</td>
+                <td>{{categoryData.categoryname}}</td>
+                <td>{{category.subcategoryname}}</td>
+                <td>{{categoryData.difficultylevel}}</td>
+                <td>{{category.creationdata}}</td>
+                <td>{{category.isEnabled}}</td>
+                <td><button class="btn btn-default btn-sm"><i class="fa fa-pencil"></i></button></td>
+              </tr>
+            </ng-container>
           </tbody>
         </table>
       </div>
